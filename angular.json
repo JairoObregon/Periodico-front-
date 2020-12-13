@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "periodico"
+    }
+  },
+  "defaultProject": "periodico",
+  "cli": {
+    "analytics": "d4e2d958-5485-49c1-b6c1-ef19d858c28e"
+  }
 }

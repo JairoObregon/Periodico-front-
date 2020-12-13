@@ -1,0 +1,185 @@
+/*:root{
+    --width:240px;
+    --padding: 10px;
+    --bgcolor: rgb(52,52,52);
+    --hovercolor: rgb(23,23,23);
+    --width-collapse: 100px;
+}*/
+body {
+    background-color: #eeeded  ;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0;
+    margin-left: 240px;
+    transition: 0.9s ease;
+}
+.body-expanded{
+    transition: 0.9s ease;
+    margin-left: 100px !important;
+}
+#main-container{
+
+}
+#sidemenu{
+    background-color: black;
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+#sidemenu a{
+    color: white;
+    text-decoration: none;
+}
+
+/*header*/
+
+#sidemenu #header{
+    /*el width siempre se toma como base+margin+pading*/
+    /*en este caso decimos que solo hay la base*/
+    box-sizing: border-box;
+    margin: 15px 0 30px 0;
+}
+#sidemenu #header #title{
+    box-sizing: border-box;
+    /*cuando se tiene un exceso esta propiedad no los muestra*/
+    overflow: hidden;
+}
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+#sidemenu #header #menu-btn{
+    display: inline-block;
+}
+#sidemenu #header #menu-btn{
+    right: 0px;
+    cursor: pointer;
+    /*padding: 10px;
+*/   /* width: var(--width-collapse);*/
+   width: 10%;
+    box-sizing: border-box;
+}
+
+
+#sidemenu #header #menu-btn .btn-hamburger{
+    background-color:  white ;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0; 
+}
+/*profile   */
+#sidemenu #profile{  
+    margin-top: 10px;  
+    margin-bottom: 30px;  
+    text-align: center;
+}
+#sidemenu #profile #photo{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+#sidemenu #profile #photo img{
+    border-radius: 50%;
+    width: 70%;
+}
+#sidemenu #profile #photo, #sidemenu #profile #name{
+    font-size: 24px;
+    /*padding: var(--width-collapse) 0;*/
+    overflow: hidden;
+}
+/*item*/
+
+#sidemenu #menu-items{
+    overflow: hidden;
+    height: 100%;
+    margin-top: 20px;
+}
+#sidemenu #menu-items .item{
+    width: 240px;
+
+}
+#sidemenu #menu-items .item .icon{
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item .icon, 
+#sidemenu #menu-items .item .title{
+    font-size: 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+#sidemenu #menu-items .item a{
+    display: block
+}
+#sidemenu #menu-items .item a:hover{
+    background-color: #444144;
+}
+#sidemenu #menu-items .item .icon{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px ;
+    width: 100px;
+}
+#sidemenu #menu-items .item .icon img{
+    width: 100%;
+}
+#sidemenu #menu-items .item  .title{
+    padding: 10px  0;
+}
+/*separdor*/
+#sidemenu #menu-items .item.separador{
+    height: 1px;
+    margin: 15px 0;
+}
+
+/* */
+.menu-expanded{
+    width: 240px;
+    transition: .9s ease;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: 10px ;
+}
+.menu-expanded #header #title span{
+
+    width: 135px;
+    overflow: hidden;
+
+}
+.menu-expanded #profile #photo{
+    width: 200px;
+}
+.menu-expanded #profile #name{
+    width: 100%;
+}
+.menu-collapsed{
+    transition: .9s ease;
+    width: 100px;
+
+}
+.menu-collapsed #header #title{
+    display: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.menu-collapsed #header #menu-btn{
+    padding: 0 35%;
+    margin: 7.5px 0;
+    width: 100% !important;
+}
+  
+.menu-collapsed #profile #name{
+    display: none;
+}
+.menu-collapsed .item {
+    width: 100px;
+}
